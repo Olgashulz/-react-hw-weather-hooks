@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Info from "./components/Info";
+import Data from "./components/Data";
+import stylesWrapper from "./CSS/wrapper.module.css"
+import stylesMain from "./CSS/main.module.css"
+import stylesInfo from "./CSS/info.module.css"
+import stylesForm from "./CSS/form.module.css"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className={stylesWrapper.wrapper}>
+            <div className={stylesMain.main}>
+                <div className='container'>
+                    <div className='row'>
+                        <div className={`col-sm-5 ${stylesInfo.info}`}>
+                        <Info/>
+                        </div>
+                        <div className={`col-sm-7 ${stylesForm.form}`}>
+                        <Data/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
