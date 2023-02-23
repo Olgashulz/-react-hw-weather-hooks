@@ -25,7 +25,7 @@ const Data = () => {
             setMessage(null);
         } catch (e) {
             console.log(e.message);
-            this.setState({message: "Enter corrected city"})
+            setMessage("Enter corrected city")
         }
     }
 
